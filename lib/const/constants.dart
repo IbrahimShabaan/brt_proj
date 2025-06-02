@@ -9,3 +9,8 @@ class AppFonts {
   static const String lalezar = 'Lalezar';
   static const String cairo = 'Cairo';
 }
+
+
+// http://10.4.30.8:876/swagger/index.html
+// User/register-by-phone-number
+//  User/login-by-phone-number

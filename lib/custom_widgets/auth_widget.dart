@@ -27,7 +27,7 @@ class AuthButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: ConstColors.kPrimaryColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(20),
             ),
           ),
           onPressed: onPressed,
@@ -35,7 +35,7 @@ class AuthButton extends StatelessWidget {
             buttonText,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 14.sp,
+              fontSize: 17.sp,
               fontFamily: AppFonts.lalezar,
               fontWeight: FontWeight.bold,
             ),

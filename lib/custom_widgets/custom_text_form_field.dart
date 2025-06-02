@@ -10,6 +10,8 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Color textColor;
   final Color borderColor;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;  // <-- هنا
 
   const CustomTextFormField({
     super.key,
@@ -21,6 +23,8 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.textColor = Colors.white,
     this.borderColor = Colors.white,
+    this.validator,
+    this.onChanged,  // <-- ضيفها هنا في الكونستركتور
   });
 
   @override
@@ -28,8 +32,10 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
+      validator: validator,
       keyboardType: keyboardType,
       style: TextStyle(color: textColor),
+      onChanged: onChanged,  // <-- أمررها هنا
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
         border: OutlineInputBorder(
