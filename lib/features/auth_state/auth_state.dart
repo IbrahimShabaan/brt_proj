@@ -1,3 +1,5 @@
+import '../../Models/ticket_model.dart';
+
 abstract class AuthState {}
 
 class AuthInitial extends AuthState {
@@ -32,6 +34,15 @@ class AuthInitial extends AuthState {
   }
 }
 
+class AuthLoading extends AuthState {}
+
+class AuthSuccess extends AuthState {}
+
+class AuthFailure extends AuthState {
+  final String error;
+  AuthFailure(this.error);
+}
+
 class SignupLoading extends AuthState {}
 
 class SignupSuccess extends AuthState {}
@@ -41,10 +52,3 @@ class SignupFailure extends AuthState {
   SignupFailure(this.error);
 }
 
-// auth_state.dart
-class AuthLoading extends AuthState {}
-class AuthSuccess extends AuthState {}
-class AuthFailure extends AuthState {
-  final String error;
-  AuthFailure(this.error);
-}

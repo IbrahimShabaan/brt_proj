@@ -21,7 +21,6 @@ class ToggleConfirmPasswordVisibility extends AuthEvent {}
 
 class SignupSubmitted extends AuthEvent {}
 
-// auth_event.dart
 class LoginSubmitted extends AuthEvent {
   final String phoneNumber;
   final String password;

@@ -1,16 +1,18 @@
 import 'package:brt_proj/Screens/login_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../auth_feature/auth_bloc/auth_bloc.dart';
-import '../auth_feature/auth_event/auth_event.dart';
-import '../auth_feature/auth_state/auth_state.dart';
+
 import '../custom_widgets/auth_widget.dart';
 import '../custom_widgets/custom_text_form_field.dart';
+import '../features/auth_bloc/auth_bloc.dart';
+import '../features/auth_event/auth_event.dart';
+import '../features/auth_state/auth_state.dart';
 import 'homepage_screen.dart';
 
 class SignupScreen extends StatefulWidget {
-  SignupScreen({super.key});
+  const SignupScreen({super.key});
 
   @override
   State<SignupScreen> createState() => _SignupScreenState();
@@ -67,7 +69,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       children: [
                         SizedBox(height: 200.sp),
                         Text(
-                          "Let's get started! Create\n your account easily",
+                          "Let's get started! Create\n your account easily".tr(),
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24.sp,
@@ -75,7 +77,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                         Text(
-                          'Enter your email and password\n to enjoy the experience',
+                          'Enter your Phone Number and Password\n to enjoy the experience'.tr(),
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14.sp,
@@ -88,8 +90,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           width: 323.w,
                           height: 42.h,
                           child: CustomTextFormField(
-                            labelText: 'Phone Number',
-                            hintText: 'Enter your phone number',
+                            labelText: 'Phone Number'.tr(),
+                            hintText: 'Enter your phone number'.tr(),
                             keyboardType: TextInputType.phone,
                             onChanged: (value) =>
                                 authBloc.add(UpdatePhone(value)),
@@ -113,8 +115,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                   horizontal: 12.w, vertical: 10.h),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.r)),
-                              hintText: 'Enter your Password',
-                              labelText: 'Password',
+                              hintText: 'Enter your Password'.tr(),
+                              labelText: 'Password'.tr(),
                               hintStyle: const TextStyle(color: Colors.white),
                               labelStyle: const TextStyle(color: Colors.white),
                               suffixIcon: IconButton(
@@ -164,8 +166,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                   horizontal: 12.w, vertical: 10.h),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.r)),
-                              hintText: 'Enter Confirm Password',
-                              labelText: 'Confirm Password',
+                              hintText: 'Enter Confirm Password'.tr(),
+                              labelText: 'Confirm Password'.tr(),
                               hintStyle: const TextStyle(color: Colors.white),
                               labelStyle: const TextStyle(color: Colors.white),
                               suffixIcon: IconButton(
@@ -187,11 +189,11 @@ class _SignupScreenState extends State<SignupScreen> {
                                 authBloc.add(UpdateConfirmPassword(value)),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Confirm Password is required';
+                                return 'Confirm Password is required'.tr();
                               } else if (value.length < 8) {
-                                return 'Minimum 8 characters';
+                                return 'Minimum 8 characters'.tr();
                               } else if (value != _passwordController.text) {
-                                return 'Passwords do not match';
+                                return 'Passwords do not match'.tr();
                               }
                               return null;
                             },
@@ -213,10 +215,10 @@ class _SignupScreenState extends State<SignupScreen> {
                                   color: Colors.black, size: 20),
                             ),
                             SizedBox(width: 5.sp),
-                            const Text('Remember me',
+                             Text('Remember me'.tr(),
                                 style: TextStyle(color: Colors.white)),
                             SizedBox(width: 75.sp),
-                            const Text('Forget your password?',
+                             Text('Forget your password?'.tr(),
                                 style: TextStyle(color: Colors.white)),
                           ],
                         ),
@@ -237,7 +239,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text("Already have account?",
+                             Text("Already have account?".tr(),
                                 style: TextStyle(color: Colors.white)),
                             TextButton(
                               onPressed: () {
@@ -248,8 +250,8 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
 
 
-                              child: const Text(
-                                "Login",
+                              child:  Text(
+                                "Login".tr(),
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,

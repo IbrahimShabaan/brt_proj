@@ -1,19 +1,30 @@
+import 'package:brt_proj/Screens/signup_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../auth_feature/auth_bloc/auth_bloc.dart';
-import '../auth_feature/auth_event/auth_event.dart';
-import '../auth_feature/auth_state/auth_state.dart';
 import '../custom_widgets/auth_widget.dart';
 import '../custom_widgets/custom_text_form_field.dart';
+import '../features/auth_bloc/auth_bloc.dart';
+import '../features/auth_event/auth_event.dart';
+import '../features/auth_state/auth_state.dart';
 import 'homepage_screen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
+
   final TextEditingController phoneController = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
+
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: 200.sp),
                     Text(
-                      "Welcome Back!\nLogin to your account",
+                      "Welcome Back!\nLogin to your account".tr(),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24.sp,
@@ -67,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Enter your phone and password\n to continue',
+                      'Enter your phone number and password\n to continue'.tr(),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14.sp,
@@ -80,15 +91,15 @@ class LoginScreen extends StatelessWidget {
                       width: 323.w,
                       height: 42.h,
                       child: CustomTextFormField(
-                        labelText: 'Phone Number',
-                        hintText: 'Enter your phone number',
+                        labelText: 'Phone Number'.tr(),
+                        hintText: 'Enter your phone number'.tr(),
                         keyboardType: TextInputType.phone,
                         controller: phoneController,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Phone number is required';
+                            return 'Phone number is required'.tr();
                           } else if (!RegExp(r'^(01)[0-9]{9}$').hasMatch(value)) {
-                            return 'Enter valid Egyptian phone number';
+                            return 'Enter valid Egyptian phone number'.tr();
                           }
                           return null;
                         },
@@ -100,16 +111,29 @@ class LoginScreen extends StatelessWidget {
                       width: 323.w,
                       height: 42.h,
                       child: CustomTextFormField(
-                        labelText: 'Password',
-                        hintText: 'Enter your Password',
+                        labelText: 'Password'.tr(),
+                        hintText: 'Enter your Password'.tr(),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscurePassword
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _obscurePassword = !_obscurePassword;
+                            });
+                          },
+                        ),
                         keyboardType: TextInputType.visiblePassword,
                         controller: passwordController,
-                        obscureText: true,
+                        obscureText: _obscurePassword,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Password is required';
+                            return 'Password is required'.tr();
                           } else if (value.length < 6) {
-                            return 'Password must be at least 6 characters';
+                            return 'Password must be at least 6 characters'.tr();
                           }
                           return null;
                         },
@@ -118,13 +142,17 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 15.sp),
                     // Login Button
                     AuthButton(
-                      buttonText: 'Login',
+                        // buttonText: transalt.'Login'.tr(),
+                //
+                buttonText: 'Login'.tr(),
                       onPressed: () {
+
                         if (_formKey.currentState!.validate()) {
                           BlocProvider.of<AuthBloc>(context).add(
                             LoginSubmitted(
                               phoneNumber: phoneController.text,
                               password: passwordController.text,
+
                             ),
                           );
                         }
@@ -134,13 +162,16 @@ class LoginScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Don't have an account?", style: TextStyle(color: Colors.white)),
+                        Text("Don't have an account?".tr(), style: TextStyle(color: Colors.white)),
                         TextButton(
                           onPressed: () {
-                            // Navigate to signup
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignupScreen()),
+                            );
                           },
                           child: Text(
-                            "Sign up",
+                            "Sign up".tr(),
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,

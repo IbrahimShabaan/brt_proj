@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  final String labelText;
-  final String hintText;
+  final String? labelText;
+  final String? hintText;
   final TextEditingController? controller;
   final bool obscureText;
   final TextInputType keyboardType;
@@ -15,8 +15,8 @@ class CustomTextFormField extends StatelessWidget {
 
   const CustomTextFormField({
     super.key,
-    required this.labelText,
-    required this.hintText,
+     this.labelText,
+     this.hintText,
     this.controller,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,

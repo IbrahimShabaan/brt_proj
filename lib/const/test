@@ -1,0 +1,86 @@
+{
+  "data": {
+    "id": "8d098be1-f8ce-4bc3-fa8c-08dda986cfbe",
+    "createdAt": "2025-06-12T11:29:24",
+    "modifiedAt": null,
+    "isCanceled": false,
+    "shiftId": 2,
+    "transactionDetails": [
+      {
+        "id": "19e97581-4a95-456f-7039-08dda986d004",
+        "price": 10,
+        "count": 1,
+        "number": "2506120200016",
+        "createdAt": "2025-06-12T11:29:24",
+        "modifiedAt": null,
+        "tripDate": "2025-06-12T06:07:04",
+        "expiryDate": "2025-06-12T12:29:24",
+        "isCanceled": false,
+        "isRefunded": false,
+        "refundedAmount": 0,
+        "qrcode": "t+dUUBrC2u9KaveL+/PgxP9bfeo/G/xn9JQqubx1Ek4KnKij/fN/GbwzCBgVL22VN+bnhg3IRFKs0quVSHfW/Dhc9NsexaXBXdsRPHzh6KMWdK+i4QmTbDKEegOra9LLjy6wKBMkr3AhfjNLiEm8pfej1ImowIddDaGfW1gJX5S3mrh9T5sBiqGdghHGjct3Nvs+gBFeREKVSYwFjbtroAXodt4Cr5CrAvu5cjxlfD5LdwgGYTMFf9Obnzlmsg2U5Qe45cFllcjMCkcOpn+A9g==",
+        "qrcodePath": "qrCode_2506120200016.png",
+        "isSynced": false,
+        "imageBaseData": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAcCSURBVHhe7ZGBiiRJCAXn/396b4QNCB5mVe9yl84lGSDq02o79evX5WjugQ/nHvhw7oEP5x74cO6BD+ce+HDugQ/nHvhw7oEP5x74cO6BD+ce+HDugQ/nHvhw7oEP5x74cO6BD+ce+HDugQ/nHvhw7oEP5x74cO6BD+ce+HDugQ/nHvhw7oEP5x74cEYO/PX1tTTImNx6kbp99kKnp+bvXUst+1Y2xcjk1YPRs971Z+/TNxXbTNayXqB1Pc6tm5W+g5HJXghGvqLryW+dw1NPxnhiSC17neM7fYKRyW+LsN7V8DaTmnPitASt8za09F19gpHJnyyiq7m+wt/Rn1rqxIaae4qMuxq68ylGJq8enAspn1qRetcDrsPqG/TU7Iuur8gcVvoORiZ7QWnU/69+ZVPMTX7Bi3laUNfjb4v8vqvZY+DcepH5T2Pk37EwW+qQWpcnqfkbG6y0juzt8s5PMTv9N6slpP6UV5xmOq1Ac41eG3RaYW3VM8HIP1gtwguxXjgG97zVC/LUjWvuRYOu5p5VvJu5yd90y7FWpG7rsE6c33QxOWQPZG9Xs1ZkvpO5yb/h8bmYjLscLWvpscw7zax6Vjo5PmsTjEz+5NG5nK7f9WLVax2DzMG9q3qClrWudxdzk39Tj8/FeCHUbR1Pepp1x87ti6xnz6rmfIKRyU8PT9151iA19xvrXZxkT/Z1+qpnipHJuRDyLu4MiK1nT4H2pHe1lXev8y4mn2Jsej6eGN21xPWuj7p70oDYvjOTOaB/2r+DkcmrBViv2HrGqUFXy3oHfTb0pOtxn+tZ283I5E8eTI9737SuDll3T/Z3fY6LlV5kX9Z3MjY5H05uvYvTqIHjZNVvPXs6j0EXu8f13YxMzsfnAtBs6KaroWWty4ntgZ6VDsSd7toUI5Pz8Rk7/8QXFWPOiVe4r8jYdeepG+vum2Bu8jdeRMfTYry47Ov07HduXKO+6kvyu6Lr28nIdC8il5EaoGV/B7+RBsRZy9i+oN71fKJNMDI5l4CB6yZ70qxDxs4LtOzDWzed7u9g9f0uZqd/46XYUjNv+Sf4t/19/ha5+9IXjgv6sSnmJn/Dw7sFvC2FxaVBal0OrmEdWU8Pb/lO5iaLWsDKIOM0IE4tDYitFanbd71pP4Xxf9ItJDVi68TkhWuQPUWnday+tS9WPZD5TuYmf5PLsvdSnvqefFHxU1/G5GCdWteTPm2Kkcl+cLcActc6n/GbBqlnjCcuOp2YHN7ynYxM7haQlqTmvs5nnAadBtbtrRfWVrUpRibz4O7hb1rG5OlNpwG/8fYdcefTfhJj/4ZFeCFeUmdmpQFx+sIaljlakXXi9BnbphibzKO7x2fN3v0ZZ714yrs4PVSOkeNTK1bxbsYmeymO0xMXf9LnvOjqtgTN/im2Bit9JyOTebAf7yVk3TVwD94Gzjtvg9RdK6zZW4dO28nIZC/Dj/9ES19k3NVWPY4L8pVmM6u64wlGJnePT19Qt5Zk/e2b7MWn3vXBqj/1n8DIv+mWQ2youadwbr0jvwN+A0OD1OyxLi8ydr6bkcndAnIJ1rMG1rM/a9DVrDm3Bp0G/gY6bSdjk/1oYpaBoUFq7ltBj3sdF9YhtfJvfdaLrn83I5O7paTmWrLSC39nv9LSnlj1WCO2777Zxdzkb/Lx5Gj2qXc5ZA1v3XQ6eeczdg4rfTdjk98W4Nqqz7WCHK3L7QvXC/c4Nq4lf9K7g5HJfrAXQGxDN86zd8XbbzzB76dRw1svOm03Y5O7RWRcWMfbkq7mPGvFKree361qnSeeYGwyD0+Dt5h+W+qQmn3qju2NNb5JzX6SkX+QD88FgbVPYkArj3W56Xqe+lZQ9/dv3/yXzE3+hiXY4N/WifFdj+vpXS+sdQaZ72Zkci7CC0g9LXXy9LbUyJOnnqwl/iZ7Vt/sYGQyS8hlpG6DTs96+s7gkxoxpL4y16eYm/xAt6BuSV2fY5uxlj3OU3NMXjguspb1nYxM5tGdUV954mLVV9CLodkXrkPWgV60LrcvXJ9gZPLqwbkYyCWRWzPo6YFvMTRwXHS18o5N9md9JyOTvRgvIHViQF/VjHs7owdPbFInX2k2yHw3I5N5MI933vnCfQW59czBdXvwN8SpgXXIvpWfYGSyH46R44mNNfdkb9bSrMMqBvoxNPhU283I5NWDcyHl09DBukGnturBP/W6Zv62bycjk1lEZ9TxxNDV3INurcje9EXF1p0XnVasNHzWdjI3+bKFe+DDuQc+nHvgw7kHPpx74MO5Bz6ce+DDuQc+nHvgw7kHPpx74MO5Bz6ce+DDuQc+nHvgw7kHPpx74MO5Bz6ce+DDuQc+nHvgw7kHPpx74MO5Bz6ce+DDuQc+nHvgw7kHPpx74KP59esfxWIa/WLnMQMAAAAASUVORK5CYII=",
+        "transactionId": "8d098be1-f8ce-4bc3-fa8c-08dda986cfbe",
+        "ticketCategoryId": 5,
+        "profileId": 1,
+        "userId": 6143,
+        "ticketCategory": {
+          "color": "Orange",
+          "hexCode": "#FFA500",
+          "stationCount": 9,
+          "price": 10,
+          "ticketTypeId": 1,
+          "isDeleted": false,
+          "maxCount": 10,
+          "id": 5,
+          "nameAr": "برتقالي",
+          "nameEn": "Orange"
+        }
+      },
+      {
+        "id": "4432daf9-16d5-40de-703a-08dda986d004",
+        "price": 10,
+        "count": 1,
+        "number": "2506120200017",
+        "createdAt": "2025-06-12T11:29:24",
+        "modifiedAt": null,
+        "tripDate": "2025-06-12T06:07:04",
+        "expiryDate": "2025-06-12T12:29:24",
+        "isCanceled": false,
+        "isRefunded": false,
+        "refundedAmount": 0,
+        "qrcode": "j8VYlwx66mErmqbyRPUx2wRwpJkOHx9B+4EYmZKMm+da1wJy/jQBOJbRqLou9/kJiCwtyKaZ5IKWTmJK1jcF44Ov+4vbntFLxO2OHUqctNJWJfSTCNVLIZ/ShnHxc1nRFXrI3PKBehDgnHNGOTQrqIQJTtUgBcNfMRHq6jZlJrQEWaP1q8jW1NTW8xDc01M6SjC0OX9LoH9LoD0OTkRBOjDMcqy9pIRZMfnYiETSNFkRY4IWeZPvA8H1Zko3aOQYXJES8W1Ktr6lNlRfZLbB0A==",
+        "qrcodePath": "qrCode_2506120200017.png",
+        "isSynced": false,
+        "imageBaseData": "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",
+        "transactionId": "8d098be1-f8ce-4bc3-fa8c-08dda986cfbe",
+        "ticketCategoryId": 5,
+        "profileId": 1,
+        "userId": 6143,
+        "ticketCategory": {
+          "color": "Orange",
+          "hexCode": "#FFA500",
+          "stationCount": 9,
+          "price": 10,
+          "ticketTypeId": 1,
+          "isDeleted": false,
+          "maxCount": 10,
+          "id": 5,
+          "nameAr": "برتقالي",
+          "nameEn": "Orange"
+        }
+      }
+    ]
+  },
+  "error": null,
+  "isSuccess": true
+}
+
+//////////////////////////////
+
+flutter: 📥 Server Response Body: {
+"data":
+{"id":"1228137c-c7e9-43b3-fa8a-08dda986cfbe","createdAt":"2025-06-12T11:20:56","modifiedAt":null,"isCanceled":false,"shiftId":2,"transactionDetails":[{
+"id":"fbbd3081-d687-45bd-7033-08dda986d004","price":10,"count":1,"number":"2506120200010","createdAt":"2025-06-12T11:20:56","modifiedAt":null,"tripDate":"2025-06-12T00:00:00","expiryDate":"2025-06-12T12:20:56","isCanceled":false,"isRefunded":false,"refundedAmount":0,"qrcode":"pQiRYDCEhUqY11Ouzd9SUM6drCtV91ghbBGUfw5ccLhE74CadCu5cbclIkg83T9Q8iz4lOHFPIL4Me6UOvHay8IwqhGFS+F9oIifPooEYjwIwH1ThPJ+HQdBqnwv23t3ef6VEDNaF280sNLjzAbvPA+4nNDJ5Ch3nEWWV6na/2Gx23NIr1mpBytVjorgqhOAdCWEUQT853jlMZ/z8a4MErdfhdKLc2ry93Bzkrd5ViSKp9JSyzVOnQ0ohdjmk6EG6vE7aemmuJKhxtH8RAITrw==","qrcodePath":"qrCode_2506120200010.png","isSynced":false,"imageBaseData":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAblSURBVHhe7ZGBChxJCAXz/z+di3AFxUNn9+AyJk0XiPp01m398fNyNPfAh3MPfDj3w<…>

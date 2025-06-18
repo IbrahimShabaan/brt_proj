@@ -1,13 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../auth_repo.dart';
+
 import '../auth_event/auth_event.dart';
+import '../repo/auth_repo.dart';
 import '../auth_state/auth_state.dart';
+
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository authRepository;
 
-  AuthBloc(this.authRepository)
-      : super(AuthInitial()) {
+  AuthBloc(this.authRepository) : super(AuthInitial()) {
     on<UpdatePhone>((event, emit) {
       if (state is AuthInitial) {
         emit((state as AuthInitial).copyWith(phone: event.phone));
@@ -20,24 +21,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
 
-// auth_bloc.dart
-    on<LoginSubmitted>((event, emit) async {
-      emit(AuthLoading());
-      try {
-        final response = await authRepository.loginUserByPhone(
-          phoneNumber: event.phoneNumber,
-          password: event.password,
-        );
-        if (response.statusCode == 200) {
-          emit(AuthSuccess());
-        } else {
-          emit(AuthFailure('Login failed'));
-        }
-      } catch (e) {
-        emit(AuthFailure(e.toString()));
-      }
-    });
-
     on<UpdateConfirmPassword>((event, emit) {
       if (state is AuthInitial) {
         emit((state as AuthInitial).copyWith(confirmPassword: event.confirmPassword));
@@ -46,27 +29,40 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     on<TogglePasswordVisibility>((event, emit) {
       if (state is AuthInitial) {
-        final currentState = state as AuthInitial;
-        emit(currentState.copyWith(obscurePassword: !currentState.obscurePassword));
+        final current = state as AuthInitial;
+        emit(current.copyWith(obscurePassword: !current.obscurePassword));
       }
     });
 
     on<ToggleConfirmPasswordVisibility>((event, emit) {
       if (state is AuthInitial) {
-        final currentState = state as AuthInitial;
-        emit(currentState.copyWith(obscureConfirmPassword: !currentState.obscureConfirmPassword));
+        final current = state as AuthInitial;
+        emit(current.copyWith(obscureConfirmPassword: !current.obscureConfirmPassword));
+      }
+    });
+
+    on<LoginSubmitted>((event, emit) async {
+      emit(AuthLoading());
+      try {
+        await authRepository.loginUserByPhone(
+          phoneNumber: event.phoneNumber,
+          password: event.password,
+        );
+        emit(AuthSuccess());
+      } catch (e) {
+        emit(AuthFailure(e.toString()));
       }
     });
 
     on<SignupSubmitted>((event, emit) async {
       if (state is AuthInitial) {
-        final currentState = state as AuthInitial;
+        final current = state as AuthInitial;
         emit(SignupLoading());
         try {
           await authRepository.signup(
-            phone: currentState.phone,
-            password: currentState.password,
-            confirmPassword: currentState.confirmPassword,
+            phone: current.phone,
+            password: current.password,
+            confirmPassword: current.confirmPassword,
           );
           emit(SignupSuccess());
         } catch (e) {
@@ -74,8 +70,5 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         }
       }
     });
-
-
-
   }
 }
