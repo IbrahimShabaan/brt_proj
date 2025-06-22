@@ -1,16 +1,17 @@
 # brt_proj
 
-A new Flutter project.
+![Image](https://github.com/user-attachments/assets/24b26873-db78-4fe1-b21d-90d9a1f0fd48)
 
-## Getting Started
+![Image](https://github.com/user-attachments/assets/ba1cbe22-83af-4c6a-9a81-c238e88c4d8c)
 
-This project is a starting point for a Flutter application.
+![Image](https://github.com/user-attachments/assets/59323944-5255-4b43-93b7-c9986540f8a5)
 
-A few resources to get you started if this is your first Flutter project:
+![Image](https://github.com/user-attachments/assets/a0509c90-8da0-4115-b13c-bb105ddc9503)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Image](https://github.com/user-attachments/assets/cf662c5c-acce-4eb5-a820-ce1c2b3685e6)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Image](https://github.com/user-attachments/assets/f109ce37-5a6a-440c-8f01-04f0c2b2ef2a)
+
+![Image](https://github.com/user-attachments/assets/8858f3a2-38fc-4eb0-888b-b57c557b89d1)
+
+![Image](https://github.com/user-attachments/assets/e91d8076-ceea-4651-be22-bedeaf6f9fa0)
